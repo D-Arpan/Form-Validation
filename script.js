@@ -7,10 +7,11 @@ let genderInp = document.querySelector("#gender");
 
 
 form.addEventListener("submit", function (dets) {
-    dets.preventDefault();
+    
 
     if (nameInp.value.length <= 2) {
         document.querySelector("#alertName").style.display = "initial";
+        dets.preventDefault();
     } else {
         document.querySelector("#alertName").style.display = "none";
     };
@@ -20,6 +21,7 @@ form.addEventListener("submit", function (dets) {
     const emailPattern = /^(?!.*\.\.)([a-zA-Z0-9]+[a-zA-Z0-9._%+-]*)@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
     if (!emailPattern.test(emailInp.value)) {
         document.querySelector("#alertEmail").style.display = "initial";
+        dets.preventDefault();
     } else {
         document.querySelector("#alertEmail").style.display = "none";
     };
@@ -29,6 +31,7 @@ form.addEventListener("submit", function (dets) {
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordPattern.test(passInp.value)) {
         document.querySelector("#alertPass").style.display = "initial";
+        dets.preventDefault();
     } else {
         document.querySelector("#alertPass").style.display = "none";
     };
