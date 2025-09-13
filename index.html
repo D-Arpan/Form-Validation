@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="mainContent">
+            <h1>Form Fill-Up</h1>
+            <form action="" autocomplete="off">
+                <label for="name">Full Name</label>
+                <input required id="name" type="text" placeholder="Name">
+                <small class="hide" id="alertName">Your name should contain atleast 2 letters</small>
+                <label for="email">Email id</label>
+                <input required id="email" type="email" placeholder="Email">
+                <small class="hide" id="alertEmail">Enter a valid email id</small>
+                <label for="password">Password</label>
+                <input required id="password" type="password" placeholder="Password">
+                <small class="hide" id="alertPass">Your password must contain atleast one upper case, one lower case, one special character and one number</small>
+                <label for="gender">Select Gender</label>
+                <select required name="" id="gender">
+                    <option value="" selected disabled>Choose your Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+                <small class="hide" id="alertGender">Please select a Gender</small>
+                <input type="submit" name="" id="submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
